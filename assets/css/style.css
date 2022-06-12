@@ -1,0 +1,20 @@
+@import url(./fontiran.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color : #f5f5f4;
+    --primary-color : #9ca3af;
+    --secondary-color : #e5e7eb;
+    --dark-color :#111827;
+    --navbar-color : #374151;
+    --hr-color : #cbd5e1;
+    --icon-color: #6366f1;
+    --sidebar-width : 250px;
+}
+body{
+    font-family: IRANSansX;
+    background-color: var(--main-color);
+}
