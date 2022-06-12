@@ -33,4 +33,26 @@ function router(){
     console.log(findRouter.router.view());
 }
 
-router();
+
+
+function navigation(url){
+    // *  use history.pushState
+
+    history.pushState(null , null , url);
+    router();
+}
+
+document.addEventListener("DOMContentLoaded" , ()=>{
+    document.body.addEventListener("click" , (e)=>{
+        // * 2 method to get data-link attribute 
+        // ! 1 - the usee  hasAttribute method
+        // ! 2 - the use matches method
+
+        if(e.target.matches("[data-link]")){
+            e.preventDefault();
+            // * create navigation function 
+            navigation(e.target.dataset.link);
+        }
+    });
+    router();
+});
