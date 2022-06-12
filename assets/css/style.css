@@ -95,3 +95,9 @@ body{
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
+
+/* main content */
+
+.main-content{
+    padding: 4rem;
+}
