@@ -40,7 +40,7 @@ window.addEventListener("popstate" , router);
 
 function navigation(url){
     // *  use history.pushState
-
+    console.log(url)
     history.pushState(null , null , url);
     router();
 }
