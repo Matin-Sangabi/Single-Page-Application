@@ -1,3 +1,7 @@
+// import pages in app 
+import Home from '../../pages/Home.js' ; 
+import Products from "../../pages/Products.js"; 
+import Blog from "../../pages/Blog.js"; 
 
 // function router
 
@@ -5,9 +9,9 @@ function router(){
     // add Array object for path 
     // view : function to show pages
     const routers = [
-        {path : "/" , view : ()=> console.log('Home Page')},
-        {path : "/products" , view : ()=> console.log('products Page')},
-        {path : "/blog" , view : ()=> console.log('blog Page')},
+        {path : "/" , view : Home},
+        {path : "/products" , view : Products},
+        {path : "/blog" , view : Blog},
     ];
 
     // loop in routers  
@@ -40,7 +44,6 @@ window.addEventListener("popstate" , router);
 
 function navigation(url){
     // *  use history.pushState
-    console.log(url)
     history.pushState(null , null , url);
     router();
 }
