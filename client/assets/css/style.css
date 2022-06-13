@@ -101,3 +101,28 @@ body{
 .main-content{
     padding: 4rem;
 }
+
+/*  mini sidebar */
+
+
+.mini-sidebar h1{
+    font-size: 20px;
+}
+.mini-sidebar .nav-link{
+    font-size: 1.3rem;
+}
+.mini-sidebar .nav-link:hover{
+    background:transparent;
+    color: var(--icon-color);
+}
+
+.mini-sidebar .app-version-label{
+    display: none;
+}
+
+.app-version-icon{
+    margin: 5px;
+}
+.mini-sidebar .app-version-icon{
+    transform: rotate(-180deg);
+}

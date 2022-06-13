@@ -3,6 +3,10 @@ import Home from '../../pages/Home.js' ;
 import Products from "../../pages/Products.js"; 
 import Blog from "../../pages/Blog.js"; 
 
+const sideBar = document.querySelector(".sidebar");
+const root = document.documentElement;
+const sideBarTogglerIcon = document.querySelector(".app-version-icon");
+
 // function router
 
 function router(){
@@ -38,6 +42,7 @@ function router(){
     document.querySelector("#root").innerHTML = findRouter.router.view();
 }
 
+
 // !2 bugs // 1- not work in popstate 2-when refresh the page everything back to normal 
 // * fixed bug num-1
 window.addEventListener("popstate" , router);
@@ -62,4 +67,14 @@ document.addEventListener("DOMContentLoaded" , ()=>{
         }
     });
     router();
+});
+
+sideBarTogglerIcon.addEventListener("click", () => {
+  sideBar.classList.toggle("mini-sidebar");
+
+  if (sideBar.classList.contains("mini-sidebar")) {
+    root.style.setProperty("--sidebar-width", 70 + "px");
+  } else {
+    root.style.setProperty("--sidebar-width", 250 + "px");
+  }
 });
