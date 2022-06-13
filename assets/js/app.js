@@ -34,7 +34,8 @@ function router(){
         };
     }
 
-    console.log(findRouter.router.view());
+    // # root added
+    document.querySelector("#root").innerHTML = findRouter.router.view();
 }
 
 // !2 bugs // 1- not work in popstate 2-when refresh the page everything back to normal 
